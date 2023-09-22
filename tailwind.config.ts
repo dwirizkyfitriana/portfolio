@@ -31,15 +31,17 @@ const config: Config = {
       'light-bg': '#F6F6F6',
       'dark-navbar': 'rgba(24, 24, 29, 0.3)'
     },
+    fontFamily: {
+      inter: ['Inter', 'sans-serif']
+    },
     backdropBlur: {
       xs: '2px'
     },
     extend: {
-      fontFamily: {
-        inter: ['Inter', 'sans-serif']
-      },
       backgroundImage: {
-        'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #131313 100%)'
+        'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #131313 100%)',
+        'gradient-header': 'url("/assets/images/gradient-header.svg")',
+        'gradient-footer': 'url("/assets/images/gradient-footer.svg")'
       }
     }
   },

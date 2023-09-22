@@ -19,51 +19,22 @@
 }
 
 body {
-  @apply bg-main-white text-onyx;
+  background-image: url('/assets/images/gradient-header.svg'),
+    url('/assets/images/gradient-footer.svg');
+  background-position: center top, center bottom;
+  @apply bg-main-white text-onyx font-inter bg-no-repeat min-h-screen;
 }
 
 body.dark {
   @apply bg-black;
 }
 
-.ellipse-container {
-  @apply flex justify-center fixed w-full m-0 -z-50;
-}
-
-.bottom.ellipse-container {
-  @apply bottom-0;
-}
-
-.ellipse {
-  width: 800px;
-  height: 200px;
-  flex-shrink: 0;
-  border-radius: 598.25px;
-
-  background: linear-gradient(
-    45deg,
-    rgba(63, 100, 233, 0.9),
-    rgba(233, 63, 63, 0.9),
-    rgba(255, 184, 0, 0.9)
-  );
-  filter: blur(118.08055114746094px);
-}
-
-.bottom .ellipse {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 184, 0, 0.9),
-    rgba(233, 63, 63, 0.9),
-    rgba(63, 100, 233, 0.9)
-  );
-}
-
 .navbar-container {
-  @apply flex justify-center w-full fixed mt-8 z-50;
+  @apply flex justify-center w-full z-50;
 }
 
 .navbar {
-  @apply hidden md:flex absolute p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey;
+  @apply hidden md:flex fixed mt-8 p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey;
   width: 1024px;
   height: 60px;
 }
@@ -80,9 +51,37 @@ body.dark {
 }
 
 .navbar-mobile {
-  @apply flex md:hidden fixed bottom-10 w-11/12 items-center justify-around bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey p-2 rounded-2xl;
+  @apply flex md:hidden fixed bottom-10 w-11/12 items-center justify-around bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey p-2 rounded-2xl z-50;
 }
 
 .navbar-mobile .active {
   @apply bg-black-50% dark:bg-white-10% p-2 px-3 rounded-full;
+}
+
+.main {
+  @apply flex justify-center mt-32 md:mt-56 relative;
+}
+
+.hero {
+  @apply flex w-11/12 md:w-4/5 h-96 flex-col;
+}
+
+.hero h1 {
+  @apply text-5xl md:text-7xl font-bold md:font-extrabold dark:text-white;
+}
+
+.hero h1 span {
+  @apply text-dark-grey;
+}
+
+.hero p {
+  @apply mt-5 md:mt-10 mb-5 md:mb-10 w-full md:w-4/5 lg:w-6/12 text-base md:text-2xl text-dark-grey;
+}
+
+.hero .btn-container {
+  @apply flex items-center gap-4 flex-col md:flex-row;
+}
+
+.btn {
+  @apply rounded-lg py-4 px-8;
 }
