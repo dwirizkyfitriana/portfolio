@@ -29,7 +29,8 @@ const config: Config = {
       'faint-white': '#F3F3F3',
       'light-border': '#EBEBEB',
       'light-bg': '#F6F6F6',
-      'dark-navbar': 'rgba(24, 24, 29, 0.3)'
+      'dark-navbar': 'rgba(24, 24, 29, 0.3)',
+      'dark-navbar-60': 'rgba(24, 24, 29, 0.6)',
     },
     fontFamily: {
       inter: ['Inter', 'sans-serif']

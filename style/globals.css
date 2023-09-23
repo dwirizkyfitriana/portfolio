@@ -47,7 +47,7 @@ body {
 }
 
 .navbar-mobile {
-  @apply flex md:hidden fixed bottom-10 w-11/12 items-center justify-around bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey p-2 rounded-2xl z-50;
+  @apply flex md:hidden fixed bottom-10 w-11/12 items-center justify-around bg-dark-navbar dark:bg-dark-navbar-60 border border-[#27262c4d] dark:border-[#27262c4d] text-onyx dark:text-light-grey p-2 rounded-xl z-50 backdrop-blur-xs;
 }
 
 .navbar-mobile .active {
@@ -79,7 +79,7 @@ body {
 }
 
 .button {
-  @apply rounded-lg py-4 px-8;
+  @apply rounded-lg py-4 px-8 text-center;
 }
 
 .intro .btn-container .btn-resume {
@@ -100,7 +100,7 @@ body {
 
 .card-img {
   object-fit: cover;
-  @apply !w-full
+  @apply !w-full;
 }
 
 .footer-container {

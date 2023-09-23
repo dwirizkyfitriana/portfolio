@@ -33,6 +33,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar-container'>
+      <p className='md:hidden text-white font-semibold text-3xl absolute mt-5 opacity-40'>[dw]</p>
       <div className='navbar'>
         <div className='navbar-item'>
           <p className='font-bold text-lg'>[dw]</p>
