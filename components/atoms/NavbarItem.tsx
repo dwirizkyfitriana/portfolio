@@ -4,16 +4,20 @@ import { HTMLAttributeAnchorTarget, ReactNode } from 'react'
 const NavbarItem = ({
   children,
   href,
-  target
+  target,
+  tooltip
 }: {
   children: ReactNode
   href: string
   target?: HTMLAttributeAnchorTarget
+  tooltip?: string
 }) => {
   return (
-    <Link href={href} target={target}>
-      {children}
-    </Link>
+    <div className='tooltip' data-tip={tooltip}>
+      <Link href={href} target={target}>
+        {children}
+      </Link>
+    </div>
   )
 }
 

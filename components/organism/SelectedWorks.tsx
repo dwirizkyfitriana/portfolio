@@ -3,7 +3,7 @@ import Card from '../molecules/SelectedWorkCard'
 
 const SelectedWorks = () => {
   return (
-    <div className='selected-work'>
+    <div id='work' className='selected-work'>
       <h1 className='font-bold text-3xl md:text-5xl'>Selected Works</h1>
 
       <div className='selected-work-item'>

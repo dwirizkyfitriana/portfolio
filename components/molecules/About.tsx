@@ -3,10 +3,10 @@ import ArrowRight from '../icons/ArrowRight'
 
 const About = () => {
   return (
-    <div className='flex flex-col justify-start w-full mt-28 gap-4'>
+    <div id='about' className='flex flex-col justify-start w-full mt-28 gap-4 md:gap-8'>
       <h1 className='font-bold text-3xl md:text-5xl'>Get to know me</h1>
       <div className='flex w-full justify-center'>
-        <div className=' bg-light-bg dark:bg-dark-bg rounded-xl py-6 px-8 w-[90%] text-justify shadow-xl'>
+        <div className=' bg-light-bg dark:bg-dark-bg rounded-xl py-6 px-8 w-full text-justify shadow-xl'>
           <p>
             I’m Dwi, a front-end engineer based in Bandung, Indonesia 🇮🇩. With 4 years of invaluable
             experience in the field, I have honed my skills in Vue.js, React.js, Next.js,
@@ -18,7 +18,10 @@ const About = () => {
             technologies, and I am always eager to take on new challenges and collaborate on
             exciting projects to push the boundaries of what’s possible in web development.
           </p>
-          <div role='button' className='card-actions justify-start items-center mt-4 w-fit group gap-4'>
+          <div
+            role='button'
+            className='card-actions justify-start items-center mt-4 w-fit group gap-4'
+          >
             <span>Read More</span>
             <ArrowRight className='group-hover:animate-arrow' />
           </div>

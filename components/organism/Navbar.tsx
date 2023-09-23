@@ -12,6 +12,8 @@ import { constants } from '@/utils/constants'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
+import StackIcon from '../icons/StackIcon'
+import NavbarMobileItem from '../atoms/NavbarMobileItem'
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme()
@@ -21,13 +23,57 @@ const Navbar = () => {
 
   const ThemeIcon = theme === 'dark' ? SunIcon : MoonIcon
 
+  const navbarItems = [
+    {
+      label: 'Home',
+      href: '/',
+      icon: HomeIcon
+    },
+    {
+      label: 'Work',
+      href: '#work',
+      icon: BagIcon
+    },
+    {
+      label: 'About',
+      href: '#about',
+      icon: UserIcon
+    },
+    {
+      label: 'Experience',
+      href: '#experience',
+      icon: StackIcon
+    },
+    {
+      label: 'Contact',
+      href: '#contact',
+      icon: EnvelopeIcon
+    }
+  ]
+
+  const navbarCtaItems = [
+    {
+      label: 'LinkedIn',
+      href: constants.URL.LINKEDIN,
+      icon: LinkedInIcon
+    },
+    {
+      label: 'Twitter',
+      href: constants.URL.TWITTER,
+      icon: TwitterIcon
+    },
+    {
+      label: 'Github',
+      href: constants.URL.GITHUB,
+      icon: GithubIcon
+    }
+  ]
+
   useEffect(() => {
-    return () => {
-      if (theme === 'system') {
-        if (systemTheme) setTheme(systemTheme)
-        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
-        else setTheme('light')
-      }
+    if (theme === 'system') {
+      if (systemTheme) setTheme(systemTheme)
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
+      else setTheme('light')
     }
   }, [setTheme, systemTheme, theme])
 
@@ -37,21 +83,18 @@ const Navbar = () => {
       <div className='navbar'>
         <div className='navbar-item'>
           <p className='font-bold text-lg'>[dw]</p>
-          <NavbarItem href='/'>Home</NavbarItem>
-          <NavbarItem href='/'>About</NavbarItem>
-          <NavbarItem href='/'>Work</NavbarItem>
-          <NavbarItem href='/'>Contact</NavbarItem>
+          {navbarItems.map((item, index) => (
+            <NavbarItem key={index} href={item.href}>
+              {item.label}
+            </NavbarItem>
+          ))}
         </div>
         <div className='navbar-item'>
-          <NavbarItem href={constants.URL.LINKEDIN} target='_blank'>
-            <LinkedInIcon />
-          </NavbarItem>
-          <NavbarItem href={constants.URL.TWITTER} target='_blank'>
-            <TwitterIcon />
-          </NavbarItem>
-          <NavbarItem href={constants.URL.GITHUB} target='_blank'>
-            <GithubIcon />
-          </NavbarItem>
+          {navbarCtaItems.map((item, index) => (
+            <NavbarItem key={index} href={item.href} target='_blank' tooltip={item.label}>
+              <item.icon />
+            </NavbarItem>
+          ))}
           <div className='vertical-divider'></div>
           <div role='button' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             <ThemeIcon />
@@ -59,26 +102,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar-mobile'>
-        <div className='active'>
-          <NavbarItem href='/'>
-            <HomeIcon />
-          </NavbarItem>
-        </div>
-        <div className=''>
-          <NavbarItem href='/'>
-            <UserIcon />
-          </NavbarItem>
-        </div>
-        <div className=''>
-          <NavbarItem href='/'>
-            <BagIcon />
-          </NavbarItem>
-        </div>
-        <div className=''>
-          <NavbarItem href='/'>
-            <EnvelopeIcon />
-          </NavbarItem>
-        </div>
+        {navbarItems.map((item, index) => (
+          <NavbarMobileItem key={index} href={item.href}>
+            <item.icon />
+          </NavbarMobileItem>
+        ))}
       </div>
     </div>
   )
