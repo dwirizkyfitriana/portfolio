@@ -3,36 +3,33 @@
 import LinkedInIcon from '../icons/LinkedInIcon'
 import TwitterIcon from '../icons/TwitterIcon'
 import GithubIcon from '../icons/GithubIcon'
-import SunIcon from '../icons/SunIcon'
 import HomeIcon from '../icons/HomeIcon'
 import UserIcon from '../icons/UserIcon'
 import BagIcon from '../icons/BagIcon'
 import EnvelopeIcon from '../icons/EnvelopeIcon'
 import NavbarItem from '../atoms/NavbarItem'
 import { constants } from '@/utils/constants'
-import MoonIcon from '../icons/MoonIcon'
-import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
+import { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(false)
+  const { systemTheme, theme, setTheme } = useTheme()
 
-  const handleSwitchTheme = (theme: 'dark' | 'light') => {
-    localStorage.setItem(constants.KEYS.APP_THEME, theme)
-    setIsDark(theme === 'dark' ? true : false)
+  const SunIcon = dynamic(() => import('../icons/SunIcon'), { ssr: false })
+  const MoonIcon = dynamic(() => import('../icons/MoonIcon'), { ssr: false })
 
-    if (theme === 'dark') document.body.classList.add('dark')
-    else document.body.classList.remove('dark')
-  }
+  const ThemeIcon = theme === 'dark' ? SunIcon : MoonIcon
 
   useEffect(() => {
     return () => {
-      let theme = localStorage.getItem(constants.KEYS.APP_THEME)
-      const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      if (!theme) theme = defaultDark ? 'dark' : 'light'
-
-      handleSwitchTheme(theme as 'dark' | 'light')
+      if (theme === 'system') {
+        if (systemTheme) setTheme(systemTheme)
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
+        else setTheme('light')
+      }
     }
-  }, [])
+  }, [setTheme, systemTheme, theme])
 
   return (
     <div className='navbar-container'>
@@ -54,8 +51,8 @@ const Navbar = () => {
             <GithubIcon />
           </NavbarItem>
           <div className='vertical-divider'></div>
-          <div role='button' onClick={() => handleSwitchTheme(isDark ? 'light' : 'dark')}>
-            {isDark ? <SunIcon /> : <MoonIcon />}
+          <div role='button' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            <ThemeIcon />
           </div>
         </div>
       </div>

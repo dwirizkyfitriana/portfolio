@@ -22,11 +22,7 @@ body {
   background-image: url('/assets/images/gradient-header.svg'),
     url('/assets/images/gradient-footer.svg');
   background-position: center top, center bottom;
-  @apply bg-main-white text-onyx font-inter bg-no-repeat min-h-screen;
-}
-
-body.dark {
-  @apply bg-black;
+  @apply bg-main-white dark:bg-black text-onyx dark:text-white font-inter bg-no-repeat min-h-screen;
 }
 
 .navbar-container {
