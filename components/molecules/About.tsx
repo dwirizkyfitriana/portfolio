@@ -6,7 +6,7 @@ const About = () => {
     <div className='flex flex-col justify-start w-full mt-28 gap-4'>
       <h1 className='font-bold text-3xl md:text-5xl'>Get to know me</h1>
       <div className='flex w-full justify-center'>
-        <div className=' bg-light-bg dark:bg-dark-bg rounded-xl py-6 px-8 w-[90%] text-justify'>
+        <div className=' bg-light-bg dark:bg-dark-bg rounded-xl py-6 px-8 w-[90%] text-justify shadow-xl'>
           <p>
             I’m Dwi, a front-end engineer based in Bandung, Indonesia 🇮🇩. With 4 years of invaluable
             experience in the field, I have honed my skills in Vue.js, React.js, Next.js,
