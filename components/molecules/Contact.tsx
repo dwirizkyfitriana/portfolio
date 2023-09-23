@@ -4,7 +4,7 @@ import { constants } from '@/utils/constants'
 
 const Contact = () => {
   return (
-    <div className='flex flex-col md:flex-row justify-between items-center mt-[114px] gap-4 w-full'>
+    <div className='flex flex-col md:flex-row justify-between items-center mt-[114px] gap-4 w-full mb-[114px]'>
       <div className='flex flex-col gap-4 items-center md:items-start'>
         <h1 className='font-bold text-3xl md:text-5xl'>Let’s work together</h1>
         <p className=' text-dark-grey w-full md:w-2/3 dark:text-medium-grey text-center md:text-start'>

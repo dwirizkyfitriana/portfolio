@@ -104,7 +104,7 @@ body {
 }
 
 .footer-container {
-  @apply flex w-full justify-center pt-4 pb-48 md:pb-6 border-t border-t-black-10% dark:border-t-white-10% mt-6;
+  @apply flex w-full justify-center pt-[74px] pb-48 md:pb-[42px] border-t border-t-black-10% dark:border-t-white-10% mt-6;
 }
 
 .footer-content {
