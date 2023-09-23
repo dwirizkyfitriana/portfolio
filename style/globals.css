@@ -30,7 +30,7 @@ body {
 }
 
 .navbar {
-  @apply hidden md:flex fixed mt-8 p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey;
+  @apply hidden md:flex fixed mt-8 p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey z-50;
   width: 1024px;
   height: 60px;
 }
@@ -55,29 +55,69 @@ body {
 }
 
 .main {
-  @apply flex justify-center mt-32 md:mt-56 relative;
+  @apply flex flex-col items-center w-11/12 md:w-4/5 mt-32 md:mt-56 m-auto relative;
 }
 
-.hero {
-  @apply flex w-11/12 md:w-4/5 h-96 flex-col;
+.intro {
+  @apply flex h-96 flex-col mt-0 md:mt-32;
 }
 
-.hero h1 {
+.intro h1 {
   @apply text-5xl md:text-7xl font-bold md:font-extrabold dark:text-white;
 }
 
-.hero h1 span {
+.intro h1 span {
   @apply text-dark-grey;
 }
 
-.hero p {
+.intro p {
   @apply mt-5 md:mt-10 mb-5 md:mb-10 w-full md:w-4/5 lg:w-6/12 text-base md:text-2xl text-dark-grey;
 }
 
-.hero .btn-container {
+.intro .btn-container {
   @apply flex items-center gap-4 flex-col md:flex-row;
 }
 
-.btn {
+.button {
   @apply rounded-lg py-4 px-8;
+}
+
+.intro .btn-container .btn-resume {
+  @apply button text-white bg-gradient-dark w-full md:w-fit;
+}
+
+.intro .btn-container .btn-touch {
+  @apply button text-onyx dark:text-dark-grey bg-faint-white dark:bg-onyx w-full md:w-fit hover:bg-onyx hover:text-faint-white dark:hover:bg-dark-grey dark:hover:text-onyx;
+}
+
+.selected-work {
+  @apply flex mt-44 md:mt-96 flex-col items-start w-full gap-4 md:gap-8;
+}
+
+.selected-work-item {
+  @apply flex w-full gap-4 flex-col md:flex-row;
+}
+
+.footer-container {
+  @apply flex w-full justify-center pt-4 pb-48 md:pb-6 border-t border-t-black-10% dark:border-t-white-10% mt-6;
+}
+
+.footer-content {
+  @apply flex w-4/5 justify-between flex-col-reverse md:flex-row gap-6 md:gap-0;
+}
+
+.footer-left {
+  @apply w-full md:w-3/4 flex flex-col justify-between gap-4 md:gap-0;
+}
+
+.footer-right {
+  @apply flex justify-between w-1/3 flex-col md:flex-row gap-6 md:gap-0;
+}
+
+.footer-right nav {
+  @apply flex flex-col leading-6 gap-2;
+}
+
+.footer-title {
+  @apply text-onyx dark:text-white text-base capitalize opacity-100;
 }

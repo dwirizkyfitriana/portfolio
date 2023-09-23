@@ -42,9 +42,24 @@ const config: Config = {
         'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #131313 100%)',
         'gradient-header': 'url("/assets/images/gradient-header.svg")',
         'gradient-footer': 'url("/assets/images/gradient-footer.svg")'
+      },
+      keyframes: {
+        arrow: {
+          '0%, 100%': {
+            transform: 'translateX(-25%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+          }
+        }
+      },
+      animation: {
+        arrow: 'arrow 1s infinite'
       }
     }
   },
-  plugins: []
+  plugins: [require('daisyui')]
 }
 export default config

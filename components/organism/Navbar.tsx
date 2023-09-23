@@ -35,6 +35,7 @@ const Navbar = () => {
     <div className='navbar-container'>
       <div className='navbar'>
         <div className='navbar-item'>
+          <p className='font-bold text-lg'>[dw]</p>
           <NavbarItem href='/'>Home</NavbarItem>
           <NavbarItem href='/'>About</NavbarItem>
           <NavbarItem href='/'>Work</NavbarItem>

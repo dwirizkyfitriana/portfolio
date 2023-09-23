@@ -1,6 +1,9 @@
+import { constants } from '@/utils/constants'
+import Link from 'next/link'
+
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='intro'>
       <h1 className='md:hidden'>
         <span>Hi 👋</span>
       </h1>
@@ -13,10 +16,16 @@ const Hero = () => {
         through creative design.
       </p>
       <div className='btn-container'>
-        <button className='btn text-white bg-gradient-dark w-full md:w-fit'>See my resume</button>
-        <button className='btn text-onyx dark:text-dark-grey bg-faint-white dark:bg-onyx w-full md:w-fit'>
+        <Link
+          href={constants.URL.RESUME}
+          target='_blank'
+          className='btn-resume'
+        >
+          See my resume
+        </Link>
+        <Link href={constants.URL.LINKEDIN} target='_blank' className='btn-touch'>
           Get in touch
-        </button>
+        </Link>
       </div>
     </div>
   )
