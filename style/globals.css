@@ -98,6 +98,11 @@ body {
   @apply flex w-full gap-4 flex-col md:flex-row;
 }
 
+.card-img {
+  object-fit: cover;
+  @apply !w-full
+}
+
 .footer-container {
   @apply flex w-full justify-center pt-4 pb-48 md:pb-6 border-t border-t-black-10% dark:border-t-white-10% mt-6;
 }
