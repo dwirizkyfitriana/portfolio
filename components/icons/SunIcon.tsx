@@ -1,6 +1,6 @@
 const SunIcon = () => {
   return (
-    <svg width='24' height='24' viewBox='0 0 24 24' fill="none">
+    <svg width='24' height='24' viewBox='0 0 24 24' fill='none'>
       <path
         d='M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z'
         stroke='#C5C5C5'

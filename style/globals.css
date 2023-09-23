@@ -59,7 +59,7 @@ body {
 }
 
 .main {
-  @apply flex flex-col items-center w-11/12 md:w-4/5 mt-32 md:mt-56 m-auto relative;
+  @apply flex flex-col items-center w-11/12 md:w-4/5 mt-32 md:mt-48 mb-48 m-auto relative;
 }
 
 .intro {
@@ -96,10 +96,6 @@ body {
 
 .selected-work {
   @apply flex mt-44 md:mt-96 flex-col items-start w-full gap-4 md:gap-8;
-}
-
-.selected-work-item {
-  @apply flex w-full gap-4 flex-col md:flex-row;
 }
 
 .card-img {

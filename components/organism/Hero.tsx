@@ -16,11 +16,7 @@ const Hero = () => {
         through creative design.
       </p>
       <div className='btn-container'>
-        <Link
-          href={constants.URL.RESUME}
-          target='_blank'
-          className='btn-resume'
-        >
+        <Link href={constants.URL.RESUME} target='_blank' className='btn-resume'>
           See my resume
         </Link>
         <Link href={constants.URL.LINKEDIN} target='_blank' className='btn-touch'>

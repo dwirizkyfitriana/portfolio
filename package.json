@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\""
   },
   "dependencies": {
     "@types/node": "20.6.3",
@@ -24,6 +25,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "daisyui": "^3.7.7"
+    "daisyui": "^3.7.7",
+    "prettier": "^3.0.3"
   }
 }

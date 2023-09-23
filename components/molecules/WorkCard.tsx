@@ -5,7 +5,13 @@ const Card = () => {
   return (
     <div className='card w-full bg-light-bg dark:bg-black-50% dark:border dark:border-dark-border shadow-xl'>
       <figure>
-        <Image className='card-img' src='/assets/images/shoes.webp' alt='Shoes' width={400} height={300} />
+        <Image
+          className='card-img'
+          src='/assets/images/shoes.webp'
+          alt='Shoes'
+          width={400}
+          height={300}
+        />
       </figure>
       <div className='card-body'>
         <h2 className='card-title'>Shoes!</h2>

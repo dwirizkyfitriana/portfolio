@@ -31,7 +31,7 @@ const config: Config = {
       'light-bg': '#F6F6F6',
       'dark-bg': '#151515',
       'dark-navbar': 'rgba(24, 24, 29, 0.3)',
-      'dark-navbar-60': 'rgba(24, 24, 29, 0.6)',
+      'dark-navbar-60': 'rgba(24, 24, 29, 0.6)'
     },
     fontFamily: {
       inter: ['Inter', 'sans-serif']
