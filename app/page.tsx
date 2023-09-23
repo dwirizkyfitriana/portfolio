@@ -1,3 +1,4 @@
+import About from '@/components/molecules/About'
 import Contact from '@/components/molecules/Contact'
 import Hero from '@/components/organism/Hero'
 import SelectedWorks from '@/components/organism/SelectedWorks'
@@ -7,6 +8,7 @@ export default function Home() {
     <main className='main'>
       <Hero />
       <SelectedWorks />
+      <About />
       <Contact />
     </main>
   )

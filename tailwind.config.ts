@@ -29,6 +29,7 @@ const config: Config = {
       'faint-white': '#F3F3F3',
       'light-border': '#EBEBEB',
       'light-bg': '#F6F6F6',
+      'dark-bg': '#151515',
       'dark-navbar': 'rgba(24, 24, 29, 0.3)',
       'dark-navbar-60': 'rgba(24, 24, 29, 0.6)',
     },
