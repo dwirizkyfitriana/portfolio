@@ -9,7 +9,9 @@ const WorkContact = () => {
       <p className='text-base font-normal text-medium-grey dark:text-dark-grey'>
         Let’s turn your idea into a visual reality
       </p>
-      <GetInTouchBtn />
+      <div className='mt-10 md:mt-20'>
+        <GetInTouchBtn />
+      </div>
     </div>
   )
 }

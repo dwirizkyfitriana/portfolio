@@ -6,7 +6,7 @@ import SendIcon from '../icons/SendIcon'
 const GetInTouchBtn = () => {
   return (
     <Link
-      className='flex items-center gap-2 button bg-gradient-dark text-white drop-shadow-lg w-fit justify-center mt-20'
+      className='flex items-center gap-2 button bg-gradient-dark text-white drop-shadow-lg w-full md:w-fit justify-center'
       href={constants.URL.LINKEDIN}
       target='_blank'
     >
