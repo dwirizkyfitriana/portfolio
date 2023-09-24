@@ -1,4 +1,4 @@
-export type Company = {
+export type Experience = {
   id: string
   name: string
   startYear: string

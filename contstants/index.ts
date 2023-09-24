@@ -1,4 +1,4 @@
-import { Company } from '@/@types/company'
+import { Experience } from '@/@types/global'
 
 export const constants = {
   URL: {
@@ -7,7 +7,7 @@ export const constants = {
     TWITTER: 'https://twitter.com/dwirizky_',
     RESUME: '/assets/files/cv-dwifitriana.pdf'
   },
-  COMPANIES: [
+  EXPERIENCE: [
     {
       id: +new Date() + Math.random() + '',
       name: 'PT Jumpa Daring Indonesia',
@@ -29,5 +29,5 @@ export const constants = {
       startYear: '2020',
       endYear: '2020'
     }
-  ] satisfies Company[]
+  ] satisfies Experience[]
 }

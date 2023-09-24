@@ -14,7 +14,7 @@ const NavbarItem = ({
 }) => {
   return (
     <div className='tooltip' data-tip={tooltip}>
-      <Link href={href} target={target}>
+      <Link className='link link-hover' href={href} target={target}>
         {children}
       </Link>
     </div>

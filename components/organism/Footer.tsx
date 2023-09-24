@@ -1,3 +1,4 @@
+import { navbarCtaItems, navbarItems } from '@/contstants/navigation'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -18,33 +19,19 @@ const Footer = () => {
         <div className='footer-right'>
           <nav>
             <h1 className='footer-title'>Links</h1>
-            <Link href='/' className='link link-hover'>
-              Home
-            </Link>
-            <Link href='/' className='link link-hover'>
-              About
-            </Link>
-            <Link href='/' className='link link-hover'>
-              Work
-            </Link>
-            <Link href='/' className='link link-hover'>
-              Contact
-            </Link>
+            {navbarItems.map((item, index) => (
+              <Link key={index} href={item.href} className='link link-hover'>
+                {item.label}
+              </Link>
+            ))}
           </nav>
           <nav>
             <h1 className='footer-title'>Elsewhere</h1>
-            <Link href='/' className='link link-hover'>
-              Email
-            </Link>
-            <Link href='/' className='link link-hover'>
-              LinkedIn
-            </Link>
-            <Link href='/' className='link link-hover'>
-              Github
-            </Link>
-            <Link href='/' className='link link-hover'>
-              Twitter
-            </Link>
+            {navbarCtaItems.map((item, index) => (
+              <Link key={index} href={item.href} className='link link-hover'>
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>

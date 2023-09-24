@@ -3,7 +3,7 @@ import ArrowRight from '../icons/ArrowRight'
 
 const Card = () => {
   return (
-    <div className='card w-full bg-light-bg dark:bg-black-50% dark:border dark:border-dark-border shadow-xl'>
+    <div className='card w-full bg-light-bg dark:bg-black-50% dark:border dark:border-dark-border shadow-xl hover:shadow-2xl'>
       <figure>
         <Image
           className='card-img'

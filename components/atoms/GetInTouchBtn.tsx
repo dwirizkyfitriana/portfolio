@@ -1,4 +1,4 @@
-import { constants } from '@/utils/constants'
+import { constants } from '@/contstants'
 import Link from 'next/link'
 import React from 'react'
 import SendIcon from '../icons/SendIcon'

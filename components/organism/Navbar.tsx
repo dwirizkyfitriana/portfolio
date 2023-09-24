@@ -1,19 +1,11 @@
 'use client'
 
-import LinkedInIcon from '../icons/LinkedInIcon'
-import TwitterIcon from '../icons/TwitterIcon'
-import GithubIcon from '../icons/GithubIcon'
-import HomeIcon from '../icons/HomeIcon'
-import UserIcon from '../icons/UserIcon'
-import BagIcon from '../icons/BagIcon'
-import EnvelopeIcon from '../icons/EnvelopeIcon'
 import NavbarItem from '../atoms/NavbarItem'
-import { constants } from '@/utils/constants'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
-import StackIcon from '../icons/StackIcon'
 import NavbarMobileItem from '../atoms/NavbarMobileItem'
+import { navbarCtaItems, navbarItems } from '@/contstants/navigation'
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme()
@@ -22,52 +14,6 @@ const Navbar = () => {
   const MoonIcon = dynamic(() => import('../icons/MoonIcon'), { ssr: false })
 
   const ThemeIcon = theme === 'dark' ? SunIcon : MoonIcon
-
-  const navbarItems = [
-    {
-      label: 'Home',
-      href: '/',
-      icon: HomeIcon
-    },
-    {
-      label: 'Work',
-      href: '#work',
-      icon: BagIcon
-    },
-    {
-      label: 'About',
-      href: '#about',
-      icon: UserIcon
-    },
-    {
-      label: 'Experience',
-      href: '#experience',
-      icon: StackIcon
-    },
-    {
-      label: 'Contact',
-      href: '#contact',
-      icon: EnvelopeIcon
-    }
-  ]
-
-  const navbarCtaItems = [
-    {
-      label: 'LinkedIn',
-      href: constants.URL.LINKEDIN,
-      icon: LinkedInIcon
-    },
-    {
-      label: 'Twitter',
-      href: constants.URL.TWITTER,
-      icon: TwitterIcon
-    },
-    {
-      label: 'Github',
-      href: constants.URL.GITHUB,
-      icon: GithubIcon
-    }
-  ]
 
   useEffect(() => {
     if (theme === 'system') {

@@ -1,14 +1,14 @@
-import { Company } from '@/@types/company'
+import { Experience } from '@/@types/global'
 
-const ExperienceCard = ({ company }: { company: Company }) => {
+const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
-    <div className='card w-full md:w-96 bg-light-bg dark:bg-dark-bg shadow-xl'>
+    <div className='card w-full md:w-96 bg-light-bg dark:bg-dark-bg shadow-xl hover:shadow-2xl'>
       <div className='card-body'>
-        <h2 className='card-title'>{company.name}</h2>
+        <h2 className='card-title'>{experience.name}</h2>
         <small>
-          {company.startYear} - {company.endYear}
+          {experience.startYear} - {experience.endYear}
         </small>
-        <p>{company.position}</p>
+        <p>{experience.position}</p>
       </div>
     </div>
   )
