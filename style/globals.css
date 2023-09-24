@@ -21,7 +21,9 @@
 body {
   background-image: url('/assets/images/gradient-header.svg'),
     url('/assets/images/gradient-footer.svg');
-  background-position: center top, center bottom;
+  background-position:
+    center top,
+    center bottom;
   @apply bg-main-white dark:bg-black text-onyx dark:text-white font-inter bg-no-repeat min-h-screen scroll-smooth;
 }
 
@@ -30,9 +32,7 @@ body {
 }
 
 .navbar {
-  @apply hidden md:flex fixed mt-8 p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey z-50;
-  width: 1024px;
-  height: 60px;
+  @apply hidden md:flex fixed w-4/5 h-16 mt-8 p-4 justify-between items-center flex-shrink-0 rounded-xl backdrop-blur-xs bg-white-25% dark:bg-dark-navbar border-2 border-white-25% dark:border-0 text-onyx dark:text-light-grey z-50;
 }
 
 .navbar-item {
