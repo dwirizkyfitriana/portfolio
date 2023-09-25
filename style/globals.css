@@ -95,7 +95,7 @@ body {
 }
 
 .selected-work {
-  @apply flex mt-44 md:mt-96 flex-col items-start w-full gap-4 md:gap-8;
+  @apply flex mt-44 flex-col items-start w-full gap-4 md:gap-8;
 }
 
 .card-img {

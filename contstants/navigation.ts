@@ -15,25 +15,25 @@ export const navbarItems = [
     icon: HomeIcon
   },
   {
-    label: 'Work',
-    href: '/#work',
+    label: 'Works',
+    href: '/works',
     icon: BagIcon
   },
   {
     label: 'About',
-    href: '/#about',
+    href: '/about',
     icon: UserIcon
   },
-  {
-    label: 'Experience',
-    href: '/#experience',
-    icon: StackIcon
-  },
-  {
-    label: 'Contact',
-    href: '/#contact',
-    icon: EnvelopeIcon
-  }
+  // {
+  //   label: 'Experience',
+  //   href: '/#experience',
+  //   icon: StackIcon
+  // },
+  // {
+  //   label: 'Contact',
+  //   href: '/#contact',
+  //   icon: EnvelopeIcon
+  // }
 ]
 
 export const navbarCtaItems = [
