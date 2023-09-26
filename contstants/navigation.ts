@@ -23,7 +23,7 @@ export const navbarItems = [
     label: 'About',
     href: '/about',
     icon: UserIcon
-  },
+  }
   // {
   //   label: 'Experience',
   //   href: '/#experience',

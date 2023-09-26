@@ -1,28 +1,9 @@
-'use client'
-
 import NavbarItem from '../atoms/NavbarItem'
-import { useTheme } from 'next-themes'
-import { useEffect } from 'react'
-import dynamic from 'next/dynamic'
 import NavbarMobileItem from '../atoms/NavbarMobileItem'
 import { navbarCtaItems, navbarItems } from '@/contstants/navigation'
+import ThemeToggle from '../atoms/ThemeToggle'
 
 const Navbar = () => {
-  const { systemTheme, theme, setTheme } = useTheme()
-
-  const SunIcon = dynamic(() => import('../icons/SunIcon'), { ssr: false })
-  const MoonIcon = dynamic(() => import('../icons/MoonIcon'), { ssr: false })
-
-  const ThemeIcon = theme === 'dark' ? SunIcon : MoonIcon
-
-  useEffect(() => {
-    if (theme === 'system') {
-      if (systemTheme) setTheme(systemTheme)
-      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark')
-      else setTheme('light')
-    }
-  }, [setTheme, systemTheme, theme])
-
   return (
     <div className='navbar-container'>
       <p className='md:hidden text-white font-semibold text-3xl absolute mt-5 opacity-40'>[dw]</p>
@@ -42,9 +23,7 @@ const Navbar = () => {
             </NavbarItem>
           ))}
           <div className='vertical-divider'></div>
-          <div role='button' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-            <ThemeIcon />
-          </div>
+          <ThemeToggle />
         </div>
       </div>
       <div className='navbar-mobile'>
