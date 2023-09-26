@@ -13,6 +13,7 @@ const Card = ({ work }: { work: Work }) => {
           alt={work.title}
           width={400}
           height={300}
+          priority
         />
       </figure>
       <div className='card-body'>
