@@ -100,7 +100,7 @@ body {
 
 .card-img {
   object-fit: cover;
-  @apply !w-full;
+  @apply !w-full max-h-[300px] min-h-[300px];
 }
 
 .footer-container {
