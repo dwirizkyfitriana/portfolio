@@ -47,7 +47,7 @@ body {
 }
 
 .navbar-mobile {
-  @apply flex items-center md:hidden fixed bottom-10 w-11/12 items-center justify-around bg-dark-navbar dark:bg-dark-navbar-60 border border-[#27262c4d] dark:border-[#27262c4d] text-onyx dark:text-light-grey p-2 rounded-xl z-50 backdrop-blur-xs;
+  @apply flex items-center md:hidden fixed bottom-10 w-11/12 justify-around bg-dark-navbar dark:bg-dark-navbar-60 border border-[#27262c4d] dark:border-[#27262c4d] text-onyx dark:text-light-grey p-2 rounded-xl z-50 backdrop-blur-xs;
 }
 
 .navbar-mobile > * {
@@ -59,11 +59,11 @@ body {
 }
 
 .main {
-  @apply flex flex-col items-center w-11/12 md:w-4/5 mt-32 md:mt-48 mb-48 m-auto relative;
+  @apply flex flex-col items-center w-11/12 md:w-4/5  mb-48 m-auto relative;
 }
 
 .intro {
-  @apply flex h-96 flex-col mt-0 md:mt-32;
+  @apply flex flex-col h-[80vh] justify-center;
 }
 
 .intro h1 {
@@ -95,7 +95,7 @@ body {
 }
 
 .selected-work {
-  @apply flex mt-44 flex-col items-start w-full gap-4 md:gap-8;
+  @apply flex mt-5 flex-col items-start w-full gap-4 md:gap-8;
 }
 
 .card-img {
