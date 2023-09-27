@@ -9,7 +9,7 @@ const SelectedWorks = () => {
       <h1 className='font-bold text-3xl md:text-5xl'>Selected Works</h1>
 
       <div className='grid grid-cols-3 gap-5 max-md:grid-cols-2 max-sm:grid-cols-1'>
-        {works.map((item, index) => (
+        {(works.length > 3 ? works.slice(0, 3) : works).map((item, index) => (
           <Card key={index} work={item} />
         ))}
       </div>
