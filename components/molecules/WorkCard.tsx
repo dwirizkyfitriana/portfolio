@@ -5,7 +5,7 @@ import { Work } from '@/@types/global'
 
 const Card = ({ work }: { work: Work }) => {
   return (
-    <div className='card w-full bg-light-bg dark:bg-black-50% dark:border dark:border-dark-border shadow-xl hover:shadow-2xl'>
+    <div className='card w-full h-full bg-light-bg dark:bg-black-50% dark:border dark:border-dark-border shadow-xl hover:shadow-2xl'>
       <figure>
         <Image
           className='card-img'

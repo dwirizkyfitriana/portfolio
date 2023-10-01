@@ -1,19 +1,34 @@
 'use client'
 
+import { Work } from '@/@types/global'
+import DetailSkeleton from '@/components/atoms/DetailSkeleton'
 import ArrowRight from '@/components/icons/ArrowRight'
-import { Work, works } from '@/contstants/works'
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
 
 const DetailWork = () => {
-  const [work, setWork] = useState<Work | null>(null)
   const params = useParams()
 
-  useEffect(() => {
-    setWork(works.filter((item) => item.id === params.id)[0])
-  }, [params.id])
+  const {
+    data: work,
+    isLoading,
+    error
+  } = useQuery({
+    queryKey: ['works', { id: params.id }],
+    queryFn: async () => {
+      const response = await axios.get(`${process.env.SERVER_URL}/api/works/${params.id}`)
+      const data = response.data.data
+      return data as Work
+    },
+    refetchOnWindowFocus: false,
+    staleTime: Infinity
+  })
+
+  if (error) return <p>An Error has occured, try again later</p>
+  if (isLoading) return <DetailSkeleton />
 
   return (
     <div className='main pt-[20vh]'>
@@ -28,6 +43,7 @@ const DetailWork = () => {
                   alt='thumbnail'
                   width={480}
                   height={270}
+                  priority
                 />
               </div>
             ))}
