@@ -12,7 +12,7 @@ const WorkShowcase = () => {
     isLoading,
     error
   } = useQuery({
-    queryKey: ['works'],
+    queryKey: ['works', 'showcase'],
     queryFn: async () => {
       const response = await axios.get(`${process.env.SERVER_URL}/api/works?showcase=true`)
       const data = response.data.data
