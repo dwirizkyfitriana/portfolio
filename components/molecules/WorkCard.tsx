@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import ArrowRight from '../icons/ArrowRight'
-import { Work } from '@/contstants/works'
 import Link from 'next/link'
+import { Work } from '@/@types/global'
 
 const Card = ({ work }: { work: Work }) => {
   return (
@@ -20,7 +20,7 @@ const Card = ({ work }: { work: Work }) => {
         <h2 className='card-title'>{work.title}</h2>
         <p>{work.desc.length > 64 ? work.desc.substring(0, 64) + '...' : work.desc}</p>
         <Link
-          href={`/works/${work.id}`}
+          href={`/works/${work._id}`}
           role='button'
           className='card-actions justify-start items-center mt-4 w-fit group'
         >

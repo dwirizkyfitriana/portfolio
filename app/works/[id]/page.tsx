@@ -50,7 +50,9 @@ const DetailWork = () => {
           <div className='space-y-1'>
             <h1 className='font-bold text-3xl md:text-4xl'>{work?.title}</h1>
             <h3 className='text-medium-grey'>{work?.subtitle}</h3>
-            <p className='badge p-3 bg-light-bg dark:bg-dark-bg text-onyx dark:text-white dark:border-dark-border'>{work?.status}</p>
+            <p className='badge p-3 bg-light-bg dark:bg-dark-bg text-onyx dark:text-white dark:border-dark-border'>
+              {work?.status}
+            </p>
           </div>
 
           <div className='space-x-2'>

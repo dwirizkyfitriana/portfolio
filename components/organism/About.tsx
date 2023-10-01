@@ -1,4 +1,3 @@
-import React from 'react'
 import ArrowRight from '../icons/ArrowRight'
 import Link from 'next/link'
 import { constants } from '@/contstants'

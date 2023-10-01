@@ -1,4 +1,3 @@
-import React from 'react'
 import ExperienceCard from '../molecules/ExperienceCard'
 import { constants } from '@/contstants'
 
