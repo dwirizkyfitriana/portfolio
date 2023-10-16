@@ -6,7 +6,7 @@ import SelectedWorks from '@/components/organism/SelectedWorks'
 
 export default function Home() {
   return (
-    <main className='main'>
+    <main className='main pt-12'>
       <Hero />
       <SelectedWorks />
       <About />
